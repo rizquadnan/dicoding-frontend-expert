@@ -78,11 +78,37 @@ button {
     text-transform: uppercase;
 }
 
+#hamburger {
+    display: none;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 510px) {
+    #drawer {
+        position: absolute;
+        background-color: white;
+        width: 80vw;
+        transition: transform .3s ease-in-out;
+        transform: translateX(-100vw);
+    }
+
     .nav__item {
         display: block;
-        margin: 0 auto;
-        padding: 0;
+        width: 100%;
+        padding: 16px;
+        text-align: left;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    #drawer.open {
+        transform: translateX(0);
+        width: 80vw;
+    }
+
+    #hamburger {
+        display: block;
+        text-align: center;
+        margin-bottom: 16px;
     }
 }
 
